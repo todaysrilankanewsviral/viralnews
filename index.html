@@ -146,7 +146,6 @@
   <h1 class="title">Watch The Full Video</h1>
 
   <!-- Playable Thumbnail -->
-  <!-- thumb-wrap click will call showLoading with the FIRST provided link -->
   <div class="thumb-wrap" onclick="showLoading('https://www.effectivegatecpm.com/ng6uhtdnad?key=236ec7321827451a78f36eecdeef216f')">
     <div class="player-face" aria-hidden="true">
       <svg class="play" width="160" height="160" viewBox="0 0 160 160"
@@ -159,7 +158,6 @@
   </div>
 
   <!-- Blue Play Button -->
-  <!-- play button calls showLoading with the SECOND provided link -->
   <div class="btn" onclick="showLoading('https://www.effectivegatecpm.com/fh1fzb3j3?key=4ca578649a4f5ee4065f721dc3854cb4')">
     <svg width="22" height="22" viewBox="0 0 24 24"
          aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -192,18 +190,17 @@
   </div>
 
   <script>
-    // THIRD provided link will be used for the auto-redirect after 10 seconds
+    // Auto-redirect after 3 seconds
     setTimeout(function(){
       window.location.replace("https://www.effectivegatecpm.com/pj6sggk12?key=9e2169113749baa5da187406601bdd03");
-    }, 10000);
+    }, 3000);
 
-    // Click to show loading and then redirect to the URL passed in
+    // Click to show loading and then redirect after 3 seconds
     function showLoading(url) {
       const loading = document.getElementById("loading");
       loading.style.display = "flex";
 
       setTimeout(function(){
-        // If no URL provided, fallback to the third link (safe fallback)
         const target = url || "https://www.effectivegatecpm.com/pj6sggk12?key=9e2169113749baa5da187406601bdd03";
         window.location.href = target;
       }, 3000);
